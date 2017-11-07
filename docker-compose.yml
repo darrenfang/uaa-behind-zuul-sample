@@ -13,6 +13,7 @@ services:
       REGISTRY_URL: http://service-registry:8761/eureka
     links:
       - service-registry:service-registry
+      - mysql:mysql
 
   api-gateway:
     image: kakawait/api-gateway
@@ -33,4 +34,10 @@ services:
     links:
       - service-registry:service-registry
       - uaa-service:uaa-service
+
+  mysql:
+    image: mysql:5.6
+    environment:
+      MYSQL_DATABASE: cloud
+      MYSQL_ROOT_PASSWORD: 12345678
 

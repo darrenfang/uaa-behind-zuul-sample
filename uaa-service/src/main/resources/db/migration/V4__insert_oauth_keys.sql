@@ -1,0 +1,55 @@
+INSERT INTO `oauth_client_details` (
+  `client_id`,
+  `resource_ids`,
+  `client_secret`,
+  `scope`,
+  `authorized_grant_types`,
+  `web_server_redirect_uri`,
+  `authorities`,
+  `access_token_validity`,
+  `refresh_token_validity`,
+  `additional_information`,
+  `autoapprove`
+)
+VALUES
+  (
+    'openid',
+    '',
+    'openid_secret',
+    'openid',
+    'authorization_code',
+    '',
+    'ROLE_ADMIN',
+    NULL,
+    NULL,
+    '{}',
+    'true'
+  );
+
+INSERT INTO `oauth_client_details` (
+  `client_id`,
+  `resource_ids`,
+  `client_secret`,
+  `scope`,
+  `authorized_grant_types`,
+  `web_server_redirect_uri`,
+  `authorities`,
+  `access_token_validity`,
+  `refresh_token_validity`,
+  `additional_information`,
+  `autoapprove`
+)
+VALUES
+  (
+    '36de6a5d-8b75-498f-954f-b6b4745b51a6',
+    '',
+    '0a54fa29-9a67-4c9c-9689-c836fc12cf2e',
+    'read,write',
+    'authorization_code,password,refresh_token',
+    '',
+    'ROLE_USER',
+    NULL,
+    NULL,
+    '{}',
+    'true'
+  );

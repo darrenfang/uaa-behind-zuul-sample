@@ -1,6 +1,11 @@
 spring:
   application:
     name: uaa-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 12345678
+    url: jdbc:mysql://mysql:3306/cloud
 
 # Define the port where the UAA server would be running
 server:
